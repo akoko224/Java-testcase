@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE xml>
+<project>
+	<target name="run">
+	<parallel> 
+        <daemons>
+		<java classname="com.fy.demo.helpers.LDAPServer" fork="true" failonerror="true" >
+		 <!-- 	<arg value="-b" />
+			<arg value="${dist.dir}" />
+			<arg value="-o" />
+			<arg value="${xml.dir}/treeindex" />
+			<arg value="tree.xml" /> 
+			<jvmarg value="-Dstrategy=treeParser" /> -->
+			<classpath refid="maven.compile.classpath" />
+		</java>
+	 </daemons>
+ </parallel> 
+	</target>
+</project>
